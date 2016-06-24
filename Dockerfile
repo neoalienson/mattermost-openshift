@@ -26,7 +26,7 @@ LABEL io.projectatomic.nulecule.environment.required="MYSQL_USER, MYSQL_PASSWORD
       io.projectatomic.nulecule.volume.data="/var/lib/mysql/data,1Gi"
 
 # add proxy for yum in a specific environment
-echo "proxy=http://10.144.76.10:8080" >> /etc/yum.conf
+RUN echo "proxy=http://10.144.76.10:8080" >> /etc/yum.conf
 
 RUN yum update -y --setopt=tsflags=nodocs && \
     yum install -y --setopt=tsflags=nodocs tar && \
