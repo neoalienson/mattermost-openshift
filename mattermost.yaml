@@ -38,6 +38,8 @@ objects:
     source:
       git:
         uri: https://github.com/goern/mattermost-openshift
+        httpProxy: 'http://10.144.76.10:8080'
+        httpsProxy: 'http://10.144.76.10:8080'
         ref: "centos7"
       type: Git
     strategy:
@@ -62,6 +64,8 @@ objects:
       type: "Git"
       git:
         uri: "https://github.com/mattermost/platform.git"
+        httpProxy: 'http://10.144.76.10:8080'
+        httpsProxy: 'http://10.144.76.10:8080'
     strategy:
       type: "Source"
       sourceStrategy:
